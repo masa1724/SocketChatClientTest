@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding/<project>=SJIS
+encoding/log.c=SJIS
+encoding/socketClientGui.c=SJIS
+encoding/user.properties=UTF-8

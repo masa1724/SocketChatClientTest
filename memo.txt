@@ -1,0 +1,94 @@
+全般
+http://blog.goo.ne.jp/masaki_goo_2006/e/a0d9e37cce58267daf9512e0f44d7dbf
+
+
+
+[エディットボックス]
+	http://yamatyuu.net/computer/program/sdk/control/editbox/index.html
+
+	・スタイル
+	ES_LEFT 左詰
+	ES_RIGHT 右詰
+	ES_CENTER センタリンク
+	ES_MULTILINE 複数行入力を可能
+	ES_AUTOVSCROLL 自動縦スクロール
+	ES_AUTOHSCROLL 自動横スクロール
+	ES_READONLY 読み取り専用
+	ES_NUMBER 数字以外入力不可
+	ES_UPPERCASE 入力文字を大文字にする
+	ES_LOWERCASE 入力文字を小文字にする
+
+	・エディットボックスの操作
+	SendMessage(hEditMsg, WM_COPY, 0, 0); 第2引数、
+	WM_CUT    : 選択範囲の切取り
+	WM_CLEAR  : 選択範囲のクリア
+	WM_COPY   : 選択範囲のコピー
+	WM_PASTE  : クリップボードの内容を貼付け
+	EM_GETSEL : テキストの選択位置を取得
+	EM_SETSEL : テキストの選択位置を指定
+	EM_GETLINECOUNT : 行数を取得（複数行の場合のみ使用)
+
+
+	// テキストの取得
+	GetDlgItemText(HWND hWnd, 識別ビット, (TCHAR*)buf, sizeof(buf) / sizeof(TCHAR));
+
+
+[List]
+http://gurigumi.s349.xrea.com/programming/visualcpp/sdk_dialog_listview1.html
+
+
+
+・TCHAR　＝　char
+・LPCTSTR　＝　const char*
+・LPTSTR　＝　char*
+
+
+・TCHAR関数
+http://vllv.us/Junk/_T/
+
+strcpy          wcscpy         _tcscpy         文字列をコピー
+strncpy         wcsncpy        _tcsncpy        指定文字数分だけ文字列をコピー
+strcat          wcscat         _tcscat         2つの文字列を連結
+strncat         wcsncat        _tcsncat        2つの文字列を指定文字数分連結
+strlen          wcslen         _tcslen         文字列の文字数を数える
+strcmp          wcscmp         _tcscmp         文字列同士を比較し、等しければ０を返す
+strncmp         wcsncmp        _tcsncmp        指定文字数分だけ文字列同士を比較し、等しければ０を返す
+strstr          wcsstr         _tcsstr         文字列の中に指定した文字列が含まれていたら０以外を返す
+sscanf          swscanf        _tscanf         文字列から対応する書式で指定した変数に値を格納
+sprintf         swprintf       _stprintf       文字列変数に対してprintfする（指定の文字列変数に書式文字列を格納）
+_scprintf       _scwprintf     _sctprintf      書式文字列をprintfした際の文字数を数える
+strtok          wcstok         _tcstok         区切り文字を指定し、文字列から区切り文字ごとに文字列を抽出していく
+strchr          wcschr         _tcschr         文字列内から指定の文字を探索し、その位置を返す
+_strdup         _wcsdup        _tcsdup         文字列の領域を複製（主に文字列を返す関数で応用可能）
+printf          wprintf        _tprintf        DOS上に文字列を描画
+scanf           wscanf         _tscanf         DOS上で入力を指定の変数に格納
+std::cout       std::wcout      なし              DOS上に文字列を描画
+std::cin        std::wcin       なし              DOS上で入力を指定の変数に格納
+fopen           _wfopen        _tfopen         ファイルストリームを開く
+fprintf         fwprintf       _ftprintf       指定のファイルストリームに書式付文字列を書き込む
+fputs           fputws         _fputts         指定のファイルストリームに文字列を一行書き込む
+fgets           fgetws         _fgetts         指定のファイルストリームから文字列を一行、指定の変数に読み込む
+fscanf          fwscanf        _ftscanf        ファイルストリームから対応する書式で指定した変数に値を格納
+fgetc           fgetwc         _fgettc
+fputc           fputwc         _fputtc
+getc            fgetwc         _gettc
+getchar         getwchar       _gettchar
+gets            getws          _getts
+putc            putwc          _puttc
+puts            putws          _putts
+strtod          wcstod         _tcstod
+strtol          wcstol         _tcstol
+strtoul         wcstoul        _tcstoul
+atof            _wtof          _tstof
+atol            _wtol          _tstol, _ttol
+atoi            _wtoi          _tstoi, _ttoi
+system          _wsystem       _tsystem
+
+
+
+・TCHAR　＝　WCHAR
+・LPCTSTR　＝　const WCHAR*
+・LPTSTR　＝　WCHAR*
+
+<置換対象>
+LVCOLUMNW => LVCOLUMNA

@@ -1,0 +1,3 @@
+#include "resource.h"
+
+RES_ID_IMG_ICON ICON DISCARDABLE "C:\\Users\\sgym2835win\\workspace_clang\\SocketChatClientGUI\\resource\\img\\icon.ico"
